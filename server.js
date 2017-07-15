@@ -72,6 +72,7 @@ app.get("/api/tables", function(req, res) {
   res.json(tables);
 });
 // api route to make new reservation (POST)
+
 app.post("/api/new", function(req, res) {
   var newRes = req.body;
   // newRes.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase(); dont need i think
@@ -89,4 +90,14 @@ app.post("/api/new", function(req, res) {
 // api route to view waitlist (GET)
 app.get("/api/wait", function(req, res) {
   res.json(waitlist);
+
+
+
+
+// =============================================================
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+
 });
