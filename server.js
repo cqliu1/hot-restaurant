@@ -80,12 +80,14 @@ app.post("/api/new", function(req, res) {
   console.log(newRes);
   if (tables.length < 5){
   	tables.push(newRes);
+  	res.json(true);
   } else{
   	waitlist.push(newRes);
+  	res.json(false);
   }
   
 
-  res.json(newRes);
+  //res.json(newRes);
 });
 // api route to view waitlist (GET)
 app.get("/api/waitlist", function(req, res) {
