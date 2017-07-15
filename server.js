@@ -68,7 +68,25 @@ app.get("/reserve", function(req, res) {
 // =============================================================
 
 // api route to view tables (GET)
-
+app.get("/api/tables", function(req, res) {
+  res.json(tables);
+});
 // api route to make new reservation (POST)
+app.post("/api/new", function(req, res) {
+  var newRes = req.body;
+  // newRes.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase(); dont need i think
 
+  console.log(newRes);
+  if (tables.length < 5){
+  	tables.push(newRes);
+  } else{
+  	waitlist.push(newRes);
+  }
+  
+
+  res.json(newRes);
+});
 // api route to view waitlist (GET)
+app.get("/api/wait", function(req, res) {
+  res.json(waitlist);
+});
