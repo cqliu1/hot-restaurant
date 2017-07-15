@@ -48,11 +48,20 @@ const waitlist = [];
 // ROUTES
 // =============================================================
 
-// basic route to home page (index.html) (GET)
+// basic route to home page (home.html) (GET)
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
 
 // route to view tables (tables.html) (GET)
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
 
 // route to make a reservation (reserve.html) (GET)
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
 
 // =============================================================
 // API
