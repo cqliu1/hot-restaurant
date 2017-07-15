@@ -73,6 +73,7 @@ app.get("/reserve", function(req, res) {
 
 // api route to view waitlist (GET)
 
+// =============================================================
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
