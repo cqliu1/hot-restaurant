@@ -88,7 +88,7 @@ app.post("/api/new", function(req, res) {
   res.json(newRes);
 });
 // api route to view waitlist (GET)
-app.get("/api/wait", function(req, res) {
+app.get("/api/waitlist", function(req, res) {
   res.json(waitlist);
 });
 
