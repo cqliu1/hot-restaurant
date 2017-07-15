@@ -72,3 +72,9 @@ app.get("/reserve", function(req, res) {
 // api route to make new reservation (POST)
 
 // api route to view waitlist (GET)
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
