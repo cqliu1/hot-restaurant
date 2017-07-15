@@ -33,6 +33,17 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // waitlist
 // - array of reservations?
 
+const Reservation = function(name,phone,email,id) {
+	this.name = name;
+	this.phone = phone;
+	this.email = email;
+	this.id = id;
+}
+
+const tables = [];
+
+const waitlist = [];
+
 // =============================================================
 // ROUTES
 // =============================================================
